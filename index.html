@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <?xml-stylesheet type="text/xsl"  hrf="home.xsl" ?>
+
+    <title>Book title and authors</title>
+</head>
+<body>
+    <h2>Book titles </h2>
+<ul>
+    <xsl:for-each  select="//book">
+<li> <xsl:value-of  select="title"/> </li>
+
+</xsl:for-each>
+
+</ul>
+
+<h2>Book author</h2>
+
+<ul>
+    <xsl:for-each  select="//book">  
+<li>    
+    <xsl:value-of select="author"/> 
+
+</li>    
+
+</xsl:for-each> 
+</ul>
+
+</body>
+</html>
